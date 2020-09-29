@@ -157,7 +157,8 @@ void ESPNOW_manager::start() {
 	this->recv_thread_params.sock_fd = this->sock_fd;
 
 	pthread_create (&recv_thd_id, NULL, &(ESPNOW_manager::sock_recv_thread), &recv_thread_params);
-    
+
+	printf("Setup OK!\n");
 }
 
 void ESPNOW_manager::stop() {
